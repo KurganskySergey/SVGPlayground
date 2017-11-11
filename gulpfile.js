@@ -1,6 +1,3 @@
-const gulp = require('gulp');
-const webpackdevserver = require('webpack-dev-server');
-
-gulp('default', () => {
-    webpackdevserver
-})
+const tsNode = require('ts-node');
+tsNode.register({ 'no-cache': true });
+require('./build-tools')

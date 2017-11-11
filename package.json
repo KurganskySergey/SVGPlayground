@@ -4,23 +4,31 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start:dev": "./node_modules/.bin/tsc webpack.config.ts & webpack-dev-server --open"
+    "test": "./node_modules/.bin/jest --config jest.config.json",
+    "start:dev": "./node_modules/.bin/gulp dev",
+    "prepush": "yarn test"
   },
   "dependencies": {
+    "d3": "4.11.0"
+  },
+  "devDependencies": {
     "@types/d3": "4.11.1",
-    "@types/gulp": "4.0.5",
+    "@types/gulp": "3.8.35",
     "@types/jest": "21.1.6",
-    "@types/react": "16.0.22",
     "@types/webpack": "3.8.1",
     "@types/webpack-dev-server": "2.9.2",
+    "awesome-typescript-loader": "3.3.0",
     "clean-webpack-plugin": "0.1.17",
-    "d3": "4.11.0",
     "gulp": "3.9.1",
+    "gulp-tslint": "8.1.2",
     "html-webpack-plugin": "2.30.1",
+    "husky": "0.14.3",
     "jest-cli": "21.2.1",
-    "react": "16.1.0",
     "ts-jest": "21.2.1",
+    "ts-node": "3.3.0",
     "tslint": "5.8.0",
+    "tslint-config-airbnb": "5.3.0",
+    "tslint-loader": "3.5.3",
     "typescript": "2.6.1",
     "webpack": "3.8.1",
     "webpack-dev-server": "2.9.4"
